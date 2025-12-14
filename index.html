@@ -129,17 +129,17 @@
         {
           name: 'ArtStation',
           url: 'https://www.artstation.com/cabertevon',
-          icon: ArtStationIcon,
+        imagePath: 'images/artstation.png', 
         },
         {
           name: 'MobyGames',
           url: 'https://www.mobygames.com/person/265846/von-caberte/',
-          icon: MobyGamesIcon,
+          imagePath: 'images/moby.png',
         },
         {
           name: 'IMDb',
           url: 'https://www.imdb.com/name/nm10766677/',
-          icon: IMDbIcon,
+          imagePath: 'images/imdb.png',
         },
       ];
 
@@ -263,7 +263,11 @@
                       aria-label={link.name}
                     >
                       <div className="w-14 h-14 bg-zinc-900 rounded-full flex items-center justify-center border border-zinc-800 group-hover:border-amber-500 group-hover:bg-amber-950/20 group-hover:shadow-[0_0_15px_rgba(234,179,8,0.3)] transition-all duration-300">
-                        <link.icon className="w-6 h-6 text-zinc-400 group-hover:text-amber-500 transition-colors" />
+                        <img 
+                          src={link.imagePath} 
+                          alt={link.name}
+                          className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"/>
+                     
                       </div>
                       <span className="text-xs text-zinc-600 font-bold uppercase tracking-widest group-hover:text-amber-500/80 transition-colors">
                         {link.name}
